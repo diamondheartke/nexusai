@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexusai - Connecting institutions to the future of learning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{{ url_for('static', filename='images/nexusai_logo.png') }}" alt="Nexusai Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-name">NEXUSAI</span>
+                    <span class="tagline">Connecting institutions to the future of learning</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="glow glow-left"></div>
+            <div class="glow glow-right"></div>
+            <svg class="hero-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:0.15" />
+                        <stop offset="100%" style="stop-color:#7AC74F;stop-opacity:0.15" />
+                    </linearGradient>
+                </defs>
+                <path d="M 60 40 Q 80 40 100 60 Q 120 40 140 40 Q 150 50 150 70 L 150 130 Q 150 150 140 160 Q 120 140 100 140 Q 80 140 60 160 Q 50 150 50 130 L 50 70 Q 50 50 60 40 Z" fill="url(#logoGradient)" />
+            </svg>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-headline">Connecting institutions to the future of learning.</h1>
+            <p class="hero-subtext">Intelligent tools and services that empower schools with data-driven insights and smarter learning solutions.</p>
+        </div>
+    </section>
+
+    <!-- Feature Cards Section -->
+    <section class="features">
+        <div class="features-container">
+            <!-- Tools Card -->
+            <div class="feature-card">
+                <div class="card-icon-wrapper tools-icon">
+                    <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="14" y="24" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <rect x="20" y="20" width="24" height="6" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <circle cx="26" cy="32" r="3" fill="currentColor"/>
+                        <circle cx="38" cy="32" r="3" fill="currentColor"/>
+                        <line x1="20" y1="42" x2="44" y2="42" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">TOOLS</h3>
+                <p class="card-description">Powerful analytical tools that help institutions transform raw academic data into meaningful insights and reports.</p>
+                <a href="{{ url_for('main.index') }}#tools" class="card-link">Explore Tools →</a>
+            </div>
+
+            <!-- Services Card -->
+            <div class="feature-card">
+                <div class="card-icon-wrapper services-icon">
+                    <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 20 28 L 20 40 Q 20 46 26 46 L 38 46 Q 44 46 44 40 L 44 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <path d="M 24 28 Q 24 20 32 20 Q 40 20 40 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <circle cx="28" cy="35" r="2" fill="currentColor"/>
+                        <circle cx="36" cy="35" r="2" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">SERVICES</h3>
+                <p class="card-description">Professional services tailored to support your institution's technology, data, and digital transformation needs.</p>
+                <a href="{{ url_for('main.index') }}#services" class="card-link">Explore Services →</a>
+            </div>
+
+            <!-- Apps Card -->
+            <div class="feature-card">
+                <div class="card-icon-wrapper apps-icon">
+                    <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="18" y="18" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <rect x="22" y="22" width="5" height="5" rx="1" fill="currentColor"/>
+                        <rect x="31" y="22" width="5" height="5" rx="1" fill="currentColor"/>
+                        <rect x="40" y="22" width="5" height="5" rx="1" fill="currentColor"/>
+                        <rect x="22" y="31" width="5" height="5" rx="1" fill="currentColor"/>
+                        <rect x="31" y="31" width="5" height="5" rx="1" fill="currentColor"/>
+                        <rect x="40" y="31" width="5" height="5" rx="1" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="card-title">APPS & EXECUTABLES</h3>
+                <p class="card-description">Standalone applications and utilities designed to simplify tasks, boost productivity, and enhance learning experiences.</p>
+                <a href="{{ url_for('main.index') }}#apps" class="card-link">Explore Apps →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="mission-vision-container">
+            <!-- Mission -->
+            <div class="mission-vision-card mission">
+                <div class="mv-icon-wrapper mission-icon">
+                    <svg class="mv-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <circle cx="32" cy="32" r="12" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="mv-heading">MISSION</h3>
+                <p class="mv-text">To empower educational institutions with accessible, intelligent, and scalable technology that improves learning outcomes and decision-making.</p>
+            </div>
+
+            <!-- Divider -->
+            <div class="mv-divider"></div>
+
+            <!-- Vision -->
+            <div class="mission-vision-card vision">
+                <div class="mv-icon-wrapper vision-icon">
+                    <svg class="mv-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="32" cy="28" rx="16" ry="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <circle cx="32" cy="28" r="4" fill="currentColor"/>
+                        <path d="M 20 45 Q 32 55 44 45" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="mv-heading">VISION</h3>
+                <p class="mv-text">A future where every institution leverages data and intelligent tools to unlock the full potential of every learner.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Section -->
+            <div class="footer-section footer-left">
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='images/nexusai_logo.png') }}" alt="Nexusai Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-branding">
+                    <span class="footer-brand">NEXUSAI</span>
+                    <span class="footer-tagline">Connecting institutions to the future of learning.</span>
+                </div>
+            </div>
+
+            <!-- Center Section -->
+            <div class="footer-section footer-center">
+                <h4 class="footer-heading">QUICK LINKS</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Section - Contact & Social -->
+            <div class="footer-section footer-right">
+                <div class="footer-contact">
+                    <h4 class="footer-heading">CONTACT</h4>
+                    <p class="footer-email">
+                        <svg class="footer-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M 2 6 L 12 13 L 22 6" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                        Nexusai.tech.ke@gmail.com
+                    </p>
+                    <p class="footer-location">
+                        <svg class="footer-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M 12 6 L 12 12 L 16 16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                        Kenya
+                    </p>
+                </div>
+                <div class="footer-social">
+                    <h4 class="footer-heading">FOLLOW US</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 19 3 L 5 3 Q 3 3 3 5 L 3 19 Q 3 21 5 21 L 19 21 Q 21 21 21 19 L 21 5 Q 21 3 19 3 Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                                <path d="M 7 10 L 7 17" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="7" cy="6.5" r="1.5" fill="currentColor"/>
+                                <path d="M 11 10 L 11 17 M 11 13 Q 11 10 14 10 Q 17 10 17 13 L 17 17" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon twitter" title="Twitter">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 3 3 L 10 10 L 3 17 M 21 3 L 10 17 L 21 17" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon facebook" title="Facebook">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 18 2 L 15 2 Q 13 2 13 4 L 13 7 L 11 7 L 11 10 L 13 10 L 13 22 L 16 22 L 16 10 L 18 10 L 19 7 L 16 7 L 16 4 Q 16 3 17 3 L 19 3 L 19 2 Z" stroke="currentColor" stroke-width="1" fill="none"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nexusai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>
