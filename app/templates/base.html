@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+         CHARACTER & VIEWPORT
+    =========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <!-- ==========================================
+         PRIMARY SEO
+    =========================================== -->
+
+    <title>
+        {% block title %}
+        Nexusai | Educational Analytics & Learning Solutions
+        {% endblock %}
+    </title>
+
+    <meta
+        name="description"
+        content="Nexusai empowers educational institutions with academic analytics, intelligent learning solutions, educational tools, software applications, and digital transformation services.">
+
+    <meta
+        name="keywords"
+        content="Education Technology, EdTech, Academic Analytics, Student Analytics, School Performance Analysis, Learning Platform, Educational Software, Analytica, Lumina, Nexusai">
+
+    <meta
+        name="author"
+        content="Nexusai">
+
+    <meta
+        name="application-name"
+        content="Nexusai">
+
+    <meta
+        name="robots"
+        content="index, follow">
+
+    <meta
+        name="theme-color"
+        content="#071529">
+
+    <!-- ==========================================
+         CANONICAL URL
+    =========================================== -->
+
+    <link
+        rel="canonical"
+        href="{{ request.url }}">
+
+    <!-- ==========================================
+         OPEN GRAPH
+    =========================================== -->
+
+    <meta
+        property="og:title"
+        content="Nexusai">
+
+    <meta
+        property="og:description"
+        content="Connecting institutions to the future of learning.">
+
+    <meta
+        property="og:type"
+        content="website">
+
+    <meta
+        property="og:url"
+        content="{{ request.url }}">
+
+    <meta
+        property="og:image"
+        content="{{ url_for('static',
+        filename='images/logo/nexusai_logo.png',
+        _external=True) }}">
+
+    <meta
+        property="og:site_name"
+        content="Nexusai">
+
+    <!-- ==========================================
+         TWITTER / X
+    =========================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image">
+
+    <meta
+        name="twitter:title"
+        content="Nexusai">
+
+    <meta
+        name="twitter:description"
+        content="Connecting institutions to the future of learning.">
+
+    <meta
+        name="twitter:image"
+        content="{{ url_for('static',
+        filename='images/logo/nexusai_logo.png',
+        _external=True) }}">
+
+    <!-- ==========================================
+         FAVICON
+    =========================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="{{ url_for('static',
+        filename='images/logo/nexusai_logo.png') }}">
+
+    <!-- ==========================================
+         FONTS
+    =========================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================
+         STYLESHEETS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static',
+        filename='css/base.css') }}">
+
+    {% block styles %}
+    {% endblock %}
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo-container">
+
+                <a href="{{ url_for('main.index') }}">
+
+                    <img
+                        src="{{ url_for('static',
+                        filename='images/logo/nexusai_logo.png') }}"
+                        alt="Nexusai Logo"
+                        class="logo">
+
+                </a>
+
+                <div class="brand">
+
+                    <h1>Nexusai</h1>
+
+                    <span>
+                        Connecting institutions to the future of learning
+                    </span>
+
+                </div>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('main.index') }}">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ==========================================
+         PAGE CONTENT
+    =========================================== -->
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-section">
+
+            <h3>Nexusai</h3>
+
+            <p>
+                Connecting institutions to the future of learning.
+            </p>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Platform</h4>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Tools
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Apps & Executables
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Products</h4>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Analytica
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Lumina
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h4>Contact</h4>
+
+            <p>Nexusai.tech.ke@gmail.com</p>
+            <p>Kenya</p>
+
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Nexusai. All Rights Reserved.
+        </p>
+
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script
+        src="{{ url_for('static',
+        filename='js/main.js') }}">
+    </script>
+
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+
+</html>

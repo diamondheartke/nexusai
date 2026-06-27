@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading Nexusai...</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#071529;
+            font-family:Segoe UI, sans-serif;
+        }
+
+        .loader{
+            text-align:center;
+        }
+
+        .logo{
+            width:120px;
+            margin-bottom:20px;
+            animation:pulse 2s infinite;
+        }
+
+        .text{
+            color:white;
+            font-size:1.1rem;
+            letter-spacing:1px;
+        }
+
+        .bar{
+            width:200px;
+            height:4px;
+            background:#20324a;
+            margin-top:20px;
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        .progress{
+            width:40%;
+            height:100%;
+            background:linear-gradient(
+                90deg,
+                #2563eb,
+                #22c55e
+            );
+            animation:load 1.5s infinite;
+        }
+
+        @keyframes load{
+            from{
+                transform:translateX(-100%);
+            }
+
+            to{
+                transform:translateX(300%);
+            }
+        }
+
+        @keyframes pulse{
+            0%,100%{
+                transform:scale(1);
+            }
+
+            50%{
+                transform:scale(1.05);
+            }
+        }
+    </style>
+
+    <script>
+    // As soon as the DOM is ready, ping the backend to configure things
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("{{ url_for('main.configure_session') }}")
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Backend is ready! Redirect to home.
+                    window.location.href = "{{ url_for('main.home') }}";
+                } else {
+                    console.error("Initialization failed:", data.message);
+                    // Optional: redirect to an error page or login
+                }
+            })
+            .catch(error => {
+                console.error("Error unpacking assets:", error);
+            });
+    });
+</script>
+
+</head>
+
+<body>
+
+<div class="loader">
+
+    <img
+        src="{{ url_for('static', filename='images/logo/nexusai_logo.png') }}"
+        class="logo"
+        alt="Nexusai Logo"
+    >
+
+    <div class="text">
+        Loading Nexusai...
+    </div>
+
+    <div class="bar">
+        <div class="progress"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

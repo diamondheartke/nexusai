@@ -1,3 +1,4 @@
+
 /**
  * NEXUSAI HOME PAGE - JAVASCRIPT
  * Handles navigation, smooth scrolling, and interactive elements
